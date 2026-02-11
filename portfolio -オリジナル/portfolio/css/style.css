@@ -32,7 +32,7 @@ img {
  レイアウト
 ---------------------------------*/
 .wrapper {
-  padding-top: 73px;
+  padding-top: 0;
 }
 
 .section {
@@ -55,17 +55,18 @@ img {
 ---------------------------------*/
 .title {
   width: 100%;
-  font-size: 90px;
+  font-size: 80px;
   font-weight: bold;
   line-height: 1;
   margin-bottom: 5px;
+  margin-top: 20px;
   text-align: center;
   letter-spacing: .05em;
   color: #333;
 }
 
 .title-p {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
   text-align: center;
   padding: 10px;
@@ -87,7 +88,8 @@ img {
   top: 0;
   z-index: 1;
   width: 100%;
-  background-color: #fff;
+  background-color: #ffffff;
+  height: 80px;
   box-shadow: 0 5px 10px -6px rgba(0, 0, 0, .1);
 }
 
@@ -100,9 +102,11 @@ img {
 
 .header-logo {
   padding: 5px;
-
 }
 
+.gnav-list {
+  margin-top: -30px;
+}
 
 
 /*------メインビジュアル---------------------------------*/
@@ -123,6 +127,7 @@ img {
 
 .logo {
   position: absolute;
+  text-align: center;
   width: 100%;
   font-size: 140px;
   font-weight: bold;
@@ -130,7 +135,7 @@ img {
   z-index: 5;
   top: 15%;
   left: 50%;
-  justify-content: center;
+
   transform: translateX(-50%);
   font-family: "Cascadia Mono", sans-serif;
   font-optical-sizing: auto;
@@ -158,6 +163,7 @@ img {
   list-style: none;
   justify-content: center;
   gap: 70px;
+
 }
 
 .gnav-item:not(:last-child) {
@@ -388,8 +394,12 @@ h5 {
 }
 
 /*--------------------------------
- Skill
+.Skill
 ---------------------------------*/
+section #skill {
+  padding: 30px;
+}
+
 
 table {
   margin: 0 auto;
@@ -411,19 +421,83 @@ td {
 
 
 /*--------------------------------
+ Creative
+---------------------------------*/
+.creative-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.creative-group {
+  text-align: center;
+  font-size: 30px;
+  margin: 50px 0 50px 0;
+}
+
+.crative-img {
+  width: 100%;
+}
+
+.creative-h {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.creative-p {
+  font-size: 20px;
+  width: 80%;
+}
+
+
+
+/*--------------------------------
  Contact
 ---------------------------------*/
-.contact {
-  text-align: center;
+#contact {
+  width: 100%;
+  min-height: 100%;
+  background-image: url(../img/green.png);
+  background-size: cover;
 }
 
-.contact-item:not(:last-child) {
-  margin-right: 10px;
+
+
+.contact-heading {
+  display: flex;
+  flex-direction: column;
 }
 
-.contact-text {
-  margin-top: 10px;
+.contact-right {
+  float: right;
+  ;
+
 }
+
+.contact-textarea {
+  background: #ffffff;
+
+}
+
+
+
+
+input {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+
+
+
+
+
+
+
+
+del
 
 /*--------------------------------
  ページトップ
@@ -475,8 +549,9 @@ td {
 
 .article-body {
   max-width: 720px;
+  margin-top: 150px;
   margin: 0 auto;
-  margin-bottom: 80px;
+  margin-bottom: 5px;
 }
 
 .article-body h3 {
