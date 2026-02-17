@@ -1,3 +1,10 @@
+@media screen and (min-width: 768px) {
+  #menu-sp #nav-sp #logo-sp {
+    display: none:;
+  }
+}
+
+
 body {
   font-family: "" "Montserrat", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   font-size: 15px;
@@ -8,25 +15,17 @@ body {
 a {
   transition: opacity .3s;
   text-decoration: none;
-  color: #1ca9e3;
+  color: black;
+
 }
 
 img {
-  max-width: 100%;
+  con max-width: 100%;
   height: auto;
   vertical-align: bottom;
   border-style: none;
 }
 
-
-
-.pc-only {
-  display: block;
-}
-
-.sp-only {
-  display: none;
-}
 
 /*--------------------------------
  レイアウト
@@ -58,7 +57,7 @@ img {
   font-size: 80px;
   font-weight: bold;
   line-height: 1;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   margin-top: 20px;
   text-align: center;
   letter-spacing: .05em;
@@ -70,7 +69,7 @@ img {
   font-weight: bold;
   text-align: center;
   padding: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   width: 100%;
 }
 
@@ -102,6 +101,10 @@ img {
 
 .header-logo {
   padding: 5px;
+  color: black;
+
+  font-family: "Cascadia Mono", sans-serif;
+  font-optical-sizing: auto;
 }
 
 .gnav-list {
@@ -131,18 +134,18 @@ img {
   width: 100%;
   font-size: 140px;
   font-weight: bold;
-  padding: 100px;
+  padding: 90px;
   z-index: 5;
   top: 15%;
-  left: 50%;
-
   transform: translateX(-50%);
   font-family: "Cascadia Mono", sans-serif;
   font-optical-sizing: auto;
-  font-weight: bold;
+  font-family: "Cascadia Mono", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
   font-style: normal;
-
 }
+
 
 .logo a {
   color: #333;
@@ -199,11 +202,6 @@ img {
   transition: none;
 }
 
-.item:not(:last-child) {
-  z-index: 10;
-  margin-right: 20px;
-}
-
 .item a {
   z-index: 10;
   position: relative;
@@ -245,22 +243,9 @@ img {
 /*--------------------------------
  Works
 ---------------------------------*/
-.works-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: -40px;
-}
 
-.works-item {
-  width: 31.74603%;
-  margin-right: 1.58730%;
-  margin-bottom: 40px;
-  color: #333;
-}
 
-.works-item:hover {
-  opacity: .9;
-}
+
 
 .works-item:nth-of-type(3n) {
   margin-right: 0;
@@ -276,15 +261,18 @@ img {
   margin-top: 8px;
 }
 
+
 .works-info {
   font-size: 10px;
   margin-top: 5px;
 }
 
 
-
-
 /*---About-----------------*/
+#about {
+  padding-bottom: 0;
+}
+
 .profile {
   display: flex;
   flex-wrap: wrap;
@@ -296,14 +284,12 @@ img {
 .profile-img {
   width: 30%;
   margin: 100px 0 0 0;
-  border-radius: 50%;
-
 }
 
 .profile-img img {
   border-radius: 50%;
   height: 100%;
-  width: 100%;
+
 }
 
 .profile-body {
@@ -334,7 +320,7 @@ img {
   max-width: 1340px;
   margin: 0 auto;
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
   padding: 0 40px;
 }
 
@@ -352,7 +338,16 @@ img {
 
 .message h4 {
   font-size: 40px;
+
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
 }
+
 
 .message-more {
   font-size: 30px;
@@ -364,7 +359,6 @@ img {
 
 img {
   width: 450px;
-
 }
 
 .about-list {
@@ -372,8 +366,12 @@ img {
 }
 
 .about-item {
+  height: 380px;
   flex: 1;
   margin: 10px;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+  padding: 10px;
 }
 
 h5 {
@@ -396,10 +394,9 @@ h5 {
 /*--------------------------------
 .Skill
 ---------------------------------*/
-section #skill {
-  padding: 30px;
+.skill-section {
+  padding-top: 0;
 }
-
 
 table {
   margin: 0 auto;
@@ -409,14 +406,19 @@ th {
   font-size: 30px;
   font-weight: bold;
   text-align: center;
-  width: 50%;
+  width: 10%;
 }
 
 td {
   font-size: 20px;
   font-weight: bold;
   text-align: left;
-  width: 50%;
+  width: 20%;
+  height: 100px;
+}
+
+tr {
+  width: 500px;
 }
 
 
@@ -425,7 +427,8 @@ td {
 ---------------------------------*/
 .creative-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 
@@ -434,11 +437,10 @@ td {
   text-align: center;
   font-size: 30px;
   margin: 50px 0 50px 0;
+
 }
 
-.crative-img {
-  width: 100%;
-}
+
 
 .creative-h {
   font-size: 20px;
@@ -460,44 +462,59 @@ td {
   min-height: 100%;
   background-image: url(../img/green.png);
   background-size: cover;
+  padding: 30px;
 }
 
-
+.contact-form {
+  display: flex;
+}
 
 .contact-heading {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .contact-right {
-  float: right;
-  ;
+  padding: 10px;
+  width: 100%;
+}
 
+
+label {
+  font-size: 60px;
+  color: #ffffff;
+}
+
+text {
+  height: 300px;
 }
 
 .contact-textarea {
   background: #ffffff;
-
+  display: block;
+  width: 100%;
+  height: 300px;
 }
-
-
 
 
 input {
   background: #ffffff;
   padding: 10px;
   border-radius: 5px 5px 5px 5px;
+  height: 50px;
 }
 
+.contact-send {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
 
-
-
-
-
-
-
-
-del
+submit a:hover {
+  background-color: #304679;
+  color: #C4A484
+}
 
 /*--------------------------------
  ページトップ
@@ -512,6 +529,7 @@ del
 
 .page-top .material-icons-outlined {
   vertical-align: bottom;
+
   color: #fff;
 }
 
@@ -591,177 +609,193 @@ del
   text-align: center;
 }
 
-/*media Queries 767
-----------------------------------------------------*/
-@media screen and (max-width: 767px) {
-  body {
-    font-size: 14px;
-  }
 
-  .pc-only {
+
+/* スマートフォン */
+@media screen and (max-width: 768px) {
+
+  .header-gnav {
     display: none;
   }
 
-  .sp-only {
-    display: block;
-  }
-
-  /* 見出し */
-  .title {
-    font-size: 26px;
-    margin-bottom: 20px;
-  }
-
-  .lead {
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 20px;
-  }
-
-  /* レイアウト */
-  .wrapper {
-    padding-top: 57px;
-  }
-
-  .section {
-    padding: 60px 0;
-  }
-
-  .container {
-    padding: 0 20px;
-  }
-
-  /* ヘッダー */
-  .header .container {
-    padding: 15px;
-  }
-
-  .header-logo {
-    font-size: 15px;
-    margin-right: 15px;
-  }
-
-  .gnav-item:not(:last-child) {
-    margin-right: 10px;
-  }
-
-  .gnav-item a {
-    font-size: 10px;
-  }
-
-  .gnav-item a:after {
-    display: none;
-  }
-
-  /*  メインビジュアル */
-  .mv {
-    height: 40vh;
-  }
-
-  .mv-container {
-    padding: 0 20px;
-  }
-
-  .mv-title {
-    font-size: 30px;
-  }
-
-  .mv-subtitle {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-
-  .mv-text {
-    top: 75%;
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  /* Works */
-  .works-name {
-    font-size: 12px;
-  }
-
-  .works-info {
-    margin-top: 3px;
-  }
-
-  .works-list {
-    justify-content: space-between;
-  }
-
-  .works-item {
-    flex: 0 0 48%;
-    margin-right: 0;
-    margin-bottom: 30px;
-  }
-
-  /* Skill */
-  .skill-list {
-    display: block;
-    margin-bottom: 0;
-  }
-
-  .skill-item {
+  .header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
     width: 100%;
-    margin-bottom: 35px;
+    background-color: #ffffff;
+    height: 70px;
+    box-shadow: 0 5px 10px -6px rgba(53, 45, 45, 0.1);
   }
 
-  .skill-item:last-child {
-    margin-bottom: 0;
+  #menu-sp {
+    display: flex;
+    padding: 0;
+    border: none;
+
   }
 
-  .skill-name {
-    margin-bottom: 5px;
+  #nav-sp {
+    background-color: aqua;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    z-index: 99;
+    float: right;
   }
 
-  .skill-text {
-    font-size: 13px;
-    line-height: 1.7;
+
+  #close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+  }
+
+  #logo-sp {
+    margin: 80px 0 30px 20px;
+    font-size: 40px;
+  }
+
+  #nav-sp nav ul {
+    padding-left: 0;
+  }
+
+  #nav-sp nav li {
+    list-style: none;
+  }
+
+  #nav-sp a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin: 0 20px 0 20px;
+    height: 80px;
+    font-size: 40px;
+  }
+
+  /* メインビジュアル*/
+  .logo {
+    text-align: center;
+    width: 100%;
+    font-size: 70px;
+    padding: 30px;
+    top: 30px;
+  }
+
+  .gnav-list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+    gap: 10px;
+    top: 10px;
+  }
+
+
+
+  .item a {
+    font-size: 50px;
+    padding: 3px;
+    top: 30px;
+    gap: 1px;
+  }
+
+  .title {
+    font-size: 65px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .title-p {
+    font-size: 40px;
   }
 
   /* About */
-  .profile {
-    display: block;
-  }
-
   .profile-img {
-    width: 150px;
+    width: 80%;
+    text-align: center;
+  }
+
+  .profile h3 {
+    font-size: 30px;
+    text-align: center;
+    margin: 50px;
+  }
+
+
+  .breaak-point {
+    display: inline-block;
+  }
+
+  .message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: -500px;
+    max-width: 1000px;
     margin: 0 auto;
-    margin-bottom: 25px;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    padding: 0 40px;
   }
 
-  .profile-body p {
-    font-size: 14px;
-    line-height: 1.7;
+  .message-text {
+    gap: 8px;
+    width: 100%;
   }
 
-  .profile-body p:not(:last-child) {
-    margin-bottom: 20px;
+  .message h4 {
+    font-size: 30px;
+
   }
 
-  /* フッター */
-  .footer {
-    padding: 20px;
+  .message-more {
+    font-size: 20px;
+    padding: 8px;
+    line-height: 1.6;
   }
 
-  /* 下層ページ */
-  .article {
-    padding: 50px 0;
+  .about-list {
+    display: flex;
+    flex-direction: column;
   }
 
-  .article-body h3 {
-    font-size: 16px;
-    padding-left: .8em;
+  .about-item {
+    height: 300px;
+    flex: 1;
+    margin: 10px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+    padding: 10px;
   }
 
-  .article-body h3:not(:first-child) {
-    margin-top: 30px;
+
+  /* creative */
+  .creative-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
   }
 
-  .article-body p {
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 20px;
+  .creative-p {
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
   }
-}
+
+  /* contact */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    font-size: 50px;
+
+  }

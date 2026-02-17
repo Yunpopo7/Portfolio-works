@@ -29,6 +29,38 @@ contact.html
           </ul>
         </nav>
       </div>
+
+      <!--スマートフォン用ナビゲーション-->
+      <button id="menu-sp" onclick="document.getElementById('nav-sp').style.display = 'block'">
+        <img src="" alt="ナビゲーションを開く">
+      </button>
+      <div id="nav-sp">
+        <button id="close" onclick="document.getElementById('nav-sp').style.display = 'none'">
+          <img src="" alt="ナビゲーションを閉じる">
+        </button <nav>
+        <nav>
+          <ul>
+            <li>
+              <a id="logo-sp" href="index.html" onclick="document.getElementById('nav-sp').style.display = 'none'">
+                TATEYAMA YUME</a>
+
+            </li>
+            <li>
+              <a class="menu" href="about.html"
+                onclick="document.getElementById('nav-sp').style.display = 'none'">ABOUT</a>
+            </li>
+            <li>
+              <a class="menu" href="creative.html"
+                onclick="document.getElementById('nav-sp').style.display = 'none'">CREATIVE</a>
+            </li>
+            <li>
+              <a class="menu" href="contact.html"
+                onclick="document.getElementById('nav-sp').style.display = 'none'">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   </div>
   <!--contact-->
   <section>
@@ -39,34 +71,23 @@ contact.html
         <p class="title-p">お問い合わせ</p>
       </div>
       <div class="container">
-        <form>
-          <div class="contact-form">
-            <div class="contact-heading">
-              <label class="contact-label">Name</label>
-            </div>
-            <div>
-              <input type="text" name="name" placeholder="入力してください">
-            </div>
-            <div class="contact-heading">
-              <label class="contact-label">email</label>
-            </div>
-            <div>
-              <input type="text" name="email" placeholder="入力してください">
-            </div>
-            <div class="contact-right">
-              <div class="contact">
-                <label class="contact-label">Message</label>
-              </div>
-              <div>
-                <textarea class="contact-textarea" name="message"></textarea>
-              </div>
-            </div>
-            <div class="contact-heading"></div>
-            <input type="submit" value="送信する">
+        <div class="contact-form">
+          <div class="contact-heading">
+            <label class="contact-label">Name</label>
+            <input type="text" name="name" placeholder="入力してください">
+            <label class="contact-label">Email</label>
+            <input type="text" name="email" placeholder="入力してください">
           </div>
+          <div class="contact-right">
+            <label class="contact-label">Message</label>
+            <textarea class="contact-textarea" name="message"></textarea>
+          </div>
+        </div>
+        <div class="contact-send">
+          <input type="submit" value="送信する" alt="送信する">
+        </div>
+        </form>
       </div>
-      </form>
-    </div>
     </div>
   </section>
 
