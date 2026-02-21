@@ -15,6 +15,7 @@
   <div class="wrapper">
 
     <!--ヘッダー-->
+
     <header class="header">
       <div class="container">
         <h1 class="header-logo">
@@ -24,7 +25,38 @@
           <ul class="gnav-list">
             <li class="gnav-item"><a href="about.html">ABOUT</a></li>
             <li class="gnav-item"><a href="creative.html">CREATIVE</a></li>
-            <li class="gnav-item"><a href="about.html">CONTACT</a></li>
+            <li class="gnav-item"><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!--スマートフォン用ナビゲーション-->
+      <button id="menu-sp" onclick="document.getElementById('nav-sp').style.display = 'block'">
+        <img src="img/menu_logo.png" alt="ナビゲーションを開く">
+      </button>
+      <div id="nav-sp">
+        <button id="close" onclick="document.getElementById('nav-sp').style.display = 'none'">
+          <img src="img/close_button.png" alt="ナビゲーションを閉じる">
+        </button>
+        <nav>
+          <ul>
+            <li>
+              <a id="logo-sp" href="index.html" onclick="document.getElementById('nav-sp').style.display = 'none'">
+                TATEYAMA YUME</a>
+
+            </li>
+            <li>
+              <a class="menu" href="about.html"
+                onclick="document.getElementById('nav-sp').style.display = 'none'">ABOUT</a>
+            </li>
+            <li>
+              <a class="menu" href="creative.html"
+                onclick="document.getElementById('nav-sp').style.display = 'none'">CREATIVE</a>
+            </li>
+            <li>
+              <a class="menu" href="contact.html"
+                onclick="document.getElementById('nav-sp').style.display = 'none'">CONTACT</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -34,33 +66,39 @@
       <div class="container">
         <h2 class="title">ABOUT</h2>
         <p class="title-p">私について</p>
+
         <div class="profile">
           <p class="profile-img">
-            <img src="img/about.png" alt="about">
+            <img src="img/IMG_0922 (1).JPG" alt="about">
           </p>
           <div class="profile-body">
-            <h3>立山 夕芽　タテヤマ ユメ</h3>
+            <h3>
+              <span class="break-point">立山 夕芽</span>
+              <span class="break-point">タテヤマ ユメ</span>
+            </h3>
             <p>
               2000年生まれ、広島県在住。<br>
-              特別支援学校卒業後、障碍者福祉事業所の利用者として弁当販売の事務を担当。<br>
+              特別支援学校卒業後、障がい福祉サービス事業所の利用者として弁当販売の事務を担当。<br>
               日々送る生活への快適さへの追求と、持っていたデザインへの興味からWebデザイナーへ。
             </p>
           </div>
         </div>
       </div>
       <div class="message">
-        <h4>"見つけた！"を共に探すデザインを。</h4>
-        <h4>"探求心"を胸に</h4>
-        <p class="message-more">
-          「どうしたら、利用しやすくなるのだろうか」<br>
-          日常、日々湧き出るささいな疑問から、ユーザーと同じ目線に立ち、<br>
-          求めるものを共に作成してゆく
-        </p>
-
-        <p class="message-img">
-          <img src="img/IMG_3853.png" alt="単眼きょう">
-        </p>
+        <div class="message-text">
+          <h4>"見つけた！"を共に探すデザインを。<br>
+            "探求心"を胸に</h4>
+          <p class="message-more">
+            「どうしたら、利用しやすくなるのだろうか」<br>
+            日常、日々湧き出るささいな疑問から、ユーザーと同じ目線に立ち、<br>
+            求めるものを共に作成してゆく
+          </p>
+        </div>
+        <img class="message-img" src="img/IMG_3853.png" alt="単眼きょう">
       </div>
+
+
+
 
       <div class="container">
         <h5>My Strengeth</h5>
@@ -68,13 +106,14 @@
         <div class="about-list">
           <div class="about-item">
             <h6 class="about-name">粘り強さ</h6>
-            <p class="about-text">一度つまずいたとしても、途中で投げ出さず、自分なりに工夫をしながら最後までやり遂げます。<br>
+            <p class="about-text">一度つまずいたとしても、途中で投げ出さず、自分なりに工夫をしながら最後までやり遂げます。
+              <br>
               "まずは挑む"という信念を持ち、物事に取り組みます。
             </p>
           </div>
           <div class="about-item">
             <h6 class="about-name">柔軟な行動力</h6>
-            <p>様々な状況の中で、"今何が必要か"、<br>
+            <p class="about-text">様々な状況の中で、"今何が必要か"、<br>
               自分にできることを忘れず探し、行動します。
             </p>
           </div>
@@ -88,22 +127,28 @@
     </section>
     <!--/about-->
     <!--skill-->
-    <section class="skill section" id="skill">
+    <section class="skill-section" id="skill">
       <div class="container">
         <h2 class="title">SKILL</h2>
-        <tabale>
+        <p class="title-p">技術</p>
+        <table>
           <caption>
-            <td>コーディング</td>
-            <td>デザイン</td>
           </caption>
-          </table>
+          <tr>
+            <th>コーディング</th>
+            <th>デザイン</th>
+          </tr>
+          <tr>
+            <td>HTML/CSS</td>
+            <td>Adobe Photoshop</td>
+            <td>Word Press</td>
+          </tr>
+        </table>
       </div>
     </section>
   </div>
 
 
 </body>
-
-</html>
 
 </html>

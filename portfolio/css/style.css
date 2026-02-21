@@ -1,3 +1,14 @@
+@media screen and (min-width: 768px) {
+
+
+  #menu-sp,
+  #nav-sp,
+  #logo-sp {
+    display: none;
+  }
+}
+
+
 body {
   font-family: "" "Montserrat", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   font-size: 15px;
@@ -6,9 +17,10 @@ body {
 }
 
 a {
+
   transition: opacity .3s;
   text-decoration: none;
-  color: #1ca9e3;
+  color: black;
 }
 
 img {
@@ -19,20 +31,11 @@ img {
 }
 
 
-
-.pc-only {
-  display: block;
-}
-
-.sp-only {
-  display: none;
-}
-
 /*--------------------------------
  レイアウト
 ---------------------------------*/
 .wrapper {
-  padding-top: 73px;
+  padding-top: 0;
 }
 
 .section {
@@ -55,21 +58,22 @@ img {
 ---------------------------------*/
 .title {
   width: 100%;
-  font-size: 90px;
+  font-size: 80px;
   font-weight: bold;
   line-height: 1;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   text-align: center;
   letter-spacing: .05em;
   color: #333;
 }
 
 .title-p {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
   text-align: center;
   padding: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   width: 100%;
 }
 
@@ -86,8 +90,9 @@ img {
   position: fixed;
   top: 0;
   z-index: 1;
-  width: 85%;
-  background-color: #fff;
+  width: 100%;
+  background-color: #ffffff;
+  height: 80px;
   box-shadow: 0 5px 10px -6px rgba(0, 0, 0, .1);
 }
 
@@ -99,55 +104,24 @@ img {
 }
 
 .header-logo {
-  padding: 5px;
-}
-
-/*------メインビジュアル---------------------------------*/
-
-.main-visual {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-
-}
-
-
-.logo {
-  position: absolute;
-
-  font-size: 140px;
-  font-weight: bold;
-  padding: 100px;
-
-  z-index: 5;
-  top: 30%;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: -30px;
+  color: black;
   font-family: "Cascadia Mono", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
-.logo a {
-  color: #333;
-}
-
-.gnav {
-  position: absolute;
-  z-index: 10;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
+  line-height: 1;
+  font-size: 35px;
 }
 
 .gnav-list {
-  z-index: 10;
+  margin-top: -30px;
+}
+
+
+
+
+.gnav-list {
   display: flex;
   list-style: none;
-  justify-content: center;
   gap: 70px;
 }
 
@@ -177,29 +151,60 @@ img {
   padding: 20px;
 }
 
-
-
 .gnav-item a:active {
   background-color: blue;
   transition: none;
 }
 
-.item:not(:last-child) {
-  z-index: 10;
-  margin-right: 20px;
+/*------メインビジュアル---------------------------------*/
+.content {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+}
+
+.main-visual {
+  background-size: cover;
+}
+
+.logo {
+  font-size: 140px;
+  font-weight: bold;
+  text-align: center;
+
+  font-family: "Cascadia Mono", sans-serif;
+  font-optical-sizing: auto;
+  font-family: "Cascadia Mono", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.logo a {
+  color: #333;
+}
+
+.gnav {
+  width: 100%;
+}
+
+.maingnav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  list-style: none;
 }
 
 .item a {
-  z-index: 10;
-  position: relative;
   font-size: 90px;
   font-weight: bold;
   display: inline-block;
   padding: 5px 0;
-  transition: .3s;
   letter-spacing: .05em;
   color: #5A3A22;
-
 }
 
 .item a:focus,
@@ -210,55 +215,14 @@ img {
   padding: 20px;
 }
 
-
 .item a:active {
   background-color: blue;
   transition: none;
 }
 
 .background-image {
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-}
-
-
-
-/*--------------------------------
- Works
----------------------------------*/
-.works-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: -40px;
-}
-
-.works-item {
-  width: 31.74603%;
-  margin-right: 1.58730%;
-  margin-bottom: 40px;
-  color: #333;
-}
-
-.works-item:hover {
-  opacity: .9;
-}
-
-.works-item:nth-of-type(3n) {
-  margin-right: 0;
-}
-
-.works-img img {
-  border: 1px solid #e6e6e6;
-}
-
-.works-name {
-  font-size: 12px;
-  font-weight: bold;
-  margin-top: 8px;
 }
 
 .works-info {
@@ -266,65 +230,34 @@ img {
   margin-top: 5px;
 }
 
-/*--------------------------------
- Skill
----------------------------------*/
-.skill-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: -50px;
-}
-
-.skill-item {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 48%;
-  margin-bottom: 50px;
-}
-
-.skill-img {
-  width: 60px;
-  height: auto;
-  margin-right: 20px;
-}
-
-.skill-body {
-  flex: 1;
-}
-
-.skill-name {
-  margin-bottom: 10px;
-}
-
-.skill-text {
-  font-size: 14px;
-  line-height: 1.8;
-}
 
 /*---About-----------------*/
+#about {
+  padding-bottom: 0;
+}
+
 .profile {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1000px;
+  width: 100%;
   margin: 0 auto;
 }
 
 .profile-img {
-  width: 50%;
-  margin-top: 100px;
-  border -radius: 50%;
-
+  width: 30%;
+  margin: 0 0px 0 0;
+  padding: 100px 50px 100px 0;
 }
 
 .profile-img img {
   border-radius: 50%;
+  height: 100%;
+  top: 0;
 }
 
 .profile-body {
   flex: 1;
-  margin-top: 100px;
+  margin: 100px 0 0 0;
 }
 
 .profile-body h3 {
@@ -335,8 +268,9 @@ img {
 .profile-body p {
   font-size: 30px;
   line-height: 1.8;
-  padding: 20;
-  px
+  padding: 20px;
+  margin: 30px;
+
 }
 
 .profile-body p:not(:last-child) {
@@ -344,41 +278,224 @@ img {
 }
 
 .message {
-  padding: 20px;
-  margin: 120px 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: -500px;
+  max-width: 1340px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 150px;
+  padding: 0 40px;
 }
 
-.message>h4 {
-  font-size: 50px;
+.message-text {
+  gap: 5px;
+  width: 300%;
 }
 
-.message-more {
-  font-size: 40px;
-  padding: 20px;
-  line-height: 2;
+
+.message-text h4 {
+  margin-bottom: 8px;
+
+
+}
+
+.message h4 {
+  font-size: 35px;
+
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
 }
 
 .message-img {
-  display: flex;
+  width: 45%;
 }
+
+.message-more {
+  font-size: 30px;
+  padding: 5px;
+  line-height: 2;
+}
+
+
+
+
 
 .about-list {
   display: flex;
 }
 
+.about-item {
+  height: 380px;
+  flex: 1;
+  margin: 10px;
+  background-color: #ffffff;
+  box-shadow: 5px 7px 15px brown;
+  padding: 10px;
+}
+
+h5 {
+  font-size: 60px;
+}
+
+.section-p {
+  font-size: 50px;
+}
+
+.about-name {
+  font-size: 30px;
+  padding: 30px;
+}
+
+.about-text {
+  font-size: 20px;
+}
+
+/*--------------------------------
+.Skill
+---------------------------------*/
+.skill-section {
+  padding-top: 0;
+}
+
+table {
+  margin: 0 auto;
+}
+
+th {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  width: 10%;
+}
+
+td {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  width: 20%;
+  height: 100px;
+}
+
+tr {
+  width: 500px;
+}
+
+
+/*--------------------------------
+ Creative
+---------------------------------*/
+.creative-list {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.creative-item {
+  width: 48%;
+}
+
+
+.creative-item img {
+  width: 100%;
+
+}
+
+.creative-item a:hover img {
+  border: 10px solid orange;
+}
+
+.creative-item a:active img {
+  filter: brightness(80%);
+}
+
+.creative-group {
+  text-align: center;
+  font-size: 30px;
+  margin: 50px 0 50px 0;
+
+}
+
+
+
+.creative-h {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.creative-p {
+  font-size: 20px;
+  padding: 0 30px 0 0;
+}
+
+
+
 /*--------------------------------
  Contact
 ---------------------------------*/
-.contact {
-  text-align: center;
+#contact {
+  width: 100%;
+  min-height: 100%;
+  background-image: url(../img/green.png);
+  background-size: cover;
+  padding: 30px;
 }
 
-.contact-item:not(:last-child) {
-  margin-right: 10px;
+.contact-form {
+  display: flex;
 }
 
-.contact-text {
-  margin-top: 10px;
+.contact-heading {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contact-right {
+  width: 100%;
+  padding: 0 20px;
+}
+
+
+label {
+  font-size: 60px;
+  color: #ffffff;
+}
+
+text {
+  height: 300px;
+}
+
+.contact-textarea {
+  background: #ffffff;
+  display: block;
+  width: 100%;
+  height: 300px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+
+input {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 5px 5px 5px 5px;
+  height: 50px;
+}
+
+.contact-send {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+submit a:hover {
+  background-color: #304679;
+  color: #C4A484
 }
 
 /*--------------------------------
@@ -431,8 +548,9 @@ img {
 
 .article-body {
   max-width: 720px;
+  margin-top: 150px;
   margin: 0 auto;
-  margin-bottom: 80px;
+  margin-bottom: 5px;
 }
 
 .article-body h3 {
@@ -472,177 +590,247 @@ img {
   text-align: center;
 }
 
-/*media Queries 767
-----------------------------------------------------*/
-@media screen and (max-width: 767px) {
-  body {
-    font-size: 14px;
+
+
+/* スマートフォン */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0;
   }
 
-  .pc-only {
+  .content {
+    top: 0;
+  }
+
+  .maingnav-list {
+    gap: 15px;
+  }
+
+  .gnav-item {
     display: none;
   }
 
-  .sp-only {
-    display: block;
+  .background-image {
+    height: 60vh;
+    object-fit: cover;
   }
 
-  /* 見出し */
-  .title {
-    font-size: 26px;
-    margin-bottom: 20px;
-  }
-
-  .lead {
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 20px;
-  }
-
-  /* レイアウト */
-  .wrapper {
-    padding-top: 57px;
-  }
-
-  .section {
-    padding: 60px 0;
-  }
-
-  .container {
-    padding: 0 20px;
-  }
-
-  /* ヘッダー */
-  .header .container {
-    padding: 15px;
+  .header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #ffffff;
+    height: 70px;
+    box-shadow: 0 5px 10px -6px rgba(53, 45, 45, 0.1);
   }
 
   .header-logo {
-    font-size: 15px;
-    margin-right: 15px;
-  }
-
-  .gnav-item:not(:last-child) {
-    margin-right: 10px;
-  }
-
-  .gnav-item a {
-    font-size: 10px;
-  }
-
-  .gnav-item a:after {
-    display: none;
-  }
-
-  /*  メインビジュアル */
-  .mv {
-    height: 40vh;
-  }
-
-  .mv-container {
-    padding: 0 20px;
-  }
-
-  .mv-title {
-    font-size: 30px;
-  }
-
-  .mv-subtitle {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-
-  .mv-text {
-    top: 75%;
+    padding: 1px;
     font-size: 14px;
-    line-height: 1.7;
   }
 
-  /* Works */
-  .works-name {
-    font-size: 12px;
+  #menu-sp {
+    display: flex;
+    padding: 0;
+    border: none;
   }
 
-  .works-info {
-    margin-top: 3px;
-  }
-
-  .works-list {
-    justify-content: space-between;
-  }
-
-  .works-item {
-    flex: 0 0 48%;
-    margin-right: 0;
-    margin-bottom: 30px;
-  }
-
-  /* Skill */
-  .skill-list {
-    display: block;
-    margin-bottom: 0;
-  }
-
-  .skill-item {
+  #nav-sp {
+    background-color: aqua;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
     width: 100%;
-    margin-bottom: 35px;
+    display: none;
+    z-index: 99;
+    float: right;
   }
 
-  .skill-item:last-child {
-    margin-bottom: 0;
+  #menu-sp {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    z-index: 99;
   }
 
-  .skill-name {
-    margin-bottom: 5px;
+
+  #close img {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    background-color: rgba(0, 0, 0, .1);
+    border: none;
+    height: 40px;
   }
 
-  .skill-text {
-    font-size: 13px;
-    line-height: 1.7;
+  #logo-sp {
+    margin: 80px 0 30px 20px;
+    font-size: 16px;
+    width: 100%;
   }
 
-  /* About */
-  .profile {
+
+  #nav-sp nav ul {
+    padding-left: 0;
+    font-weight: bold;
+  }
+
+  #nav-sp nav li {
+    list-style: none;
+  }
+
+  #nav-sp a {
     display: block;
+    color: black;
+    text-decoration: none;
+    margin: 0 20px 0 20px;
+    height: 80px;
+    font-size: 40px;
   }
 
-  .profile-img {
-    width: 150px;
-    margin: 0 auto;
-    margin-bottom: 25px;
-  }
-
-  .profile-body p {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  .profile-body p:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-  /* フッター */
-  .footer {
+  #nav-sp a:active {
+    background-color: #304679;
+    color: #bd956c;
+    border-radius: 40px 40px 40px 40px;
     padding: 20px;
   }
 
-  /* 下層ページ */
-  .article {
-    padding: 50px 0;
+  /* メインビジュアル*/
+  .logo {
+    text-align: center;
+    width: 100%;
+    font-size: 70px;
+    padding: 30px;
+    top: 30px;
   }
 
-  .article-body h3 {
-    font-size: 16px;
-    padding-left: .8em;
+  .gnav-list {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    padding: 5px;
+    gap: 10px;
+    top: 10px;
   }
 
-  .article-body h3:not(:first-child) {
-    margin-top: 30px;
+
+
+  .item a {
+    font-size: 50px;
+    padding: 3px;
+    top: 30px;
+    gap: 1px;
   }
 
-  .article-body p {
-    font-size: 14px;
-    line-height: 1.7;
+  .title {
+    font-size: 65px;
     margin-bottom: 20px;
+    text-align: center;
   }
+
+  .title-p {
+    font-size: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* About */
+
+
+  .profile-img {
+    width: 100%;
+    margin: 0 30px 0 30px;
+    padding: 20px 0 10px 0;
+    height: 100%;
+  }
+
+  .profile-img img {
+    border-radius: 50%;
+    height: 80%;
+    top: 0;
+    width: 100%;
+    margin: auto;
+  }
+
+  .profile h3 {
+    font-size: 30px;
+    text-align: center;
+    margin: 10px 0 10px 0;
+  }
+
+
+  .breaak-point {
+    display: inline-block;
+  }
+
+  .message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: -500px;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    padding: 0 40px;
+  }
+
+  .message-text {
+    gap: 8px;
+    width: 100%;
+  }
+
+  .message h4 {
+    font-size: 30px;
+
+  }
+
+  .message-more {
+    font-size: 20px;
+    padding: 8px;
+    line-height: 1.6;
+  }
+
+  .about-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-item {
+    height: 300px;
+    flex: 1;
+    margin: 10px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+  }
+
+
+  /* creative */
+  .creative-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .creative-p {
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* contact */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+
 }

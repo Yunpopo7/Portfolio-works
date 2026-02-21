@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>TATEYAMA portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="prev" href="index.html">
+  <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!--ヘッダー-->
+    <header class="header">
+      <div class="container">
+        <h1 class="header-logo">
+          <a href="index.html">TATEYAMA YUME</a>
+        </h1>
+        <nav class="header-gnav">
+          <ul class="gnav-list">
+            <li class="gnav-item"><a href="about.html">ABOUT</a></li>
+            <li class="gnav-item"><a href="creative.html">CREATIVE</a></li>
+            <li class="gnav-item"><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!--スマートフォン用ナビゲーション-->
+      <button id="menu-sp" onclick="document.getElementById('nav-sp').style.display = 'block'">
+        <img src="img/menu_logo.png" alt="ナビゲーションを開く">
+      </button>
+      <div id="nav-sp">
+        <button id="close" onclick="document.getElementById('nav-sp').style.display = 'none'">
+          <img src="img/close_button.png" alt="ナビゲーションを閉じる">
+        </button>
+        <nav>
+
+          <ul>
+            <li>
+              <a id="logo-sp" href="index.html" onclick="document.getElementById('nav-sp').style.display = 'none'">
+                TATEYAMA YUME</a>
+            </li>
+            <li>
+              <a class="menu" href="about.html"
+                onclick="document.getElementById('nav-sp').style.display = 'none'">ABOUT</a>
+            </li>
+            <li>
+              <a class="menu" href="creative.html"
+                onclick="document.getElementById('nav-sp').style.display = 'none'">CREATIVE</a>
+            </li>
+            <li>
+              <a class="menu" href="contact.html"
+                onclick="document.getElementById('nav-sp').style.display = 'none'">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+  </div>
+  </header>
+  </div>
+
+  <!------creative------>
+  <section class="creative section" id="creative">
+    <div class="container">
+      <h2 class="title">CREATIVE</h2>
+      <p class="title-p">製作</p>
+
+      <div>
+
+        <h3 class="creative-group">HTML/CSS・Java Sprict</h3>
+        <div class="creative-list">
+          <div class="creative-item">
+            <div cl ass="crative-img">
+              <a href="https://osaka.mobi/social-tech/" target="blank">
+                <img src="img/socialtec.png.png" alt="詳しく見る">
+              </a>
+            </div>
+            <h4 class="creative-h">企業様のコーポレイトサイト</h4>
+            <p class="creative-p">5ページから構成されています。<br>
+              レスポンシブ対応により、どのスタイルからアクセスしても形状が崩れない使用に制作しました。
+            </p>
+          </div>
+        </div>
+        <div>
+          <h3 class="creative-group">Adobe Photoshop</h3>
+          <div class="creative-list">
+            <div class="creative-item">
+              <div class="crative-img">
+                <a href="works-2.html">
+                  <img src="img/chocolate.png" alt="大きく見る">
+                </a>
+              </div>
+              <h4 class="creative-h">チョコレート菓子の広告バナー</h4>
+              <p class="creative-p">
+                手軽に食べられながら、高級感を感じることができる雰囲気を表現するため、文字列の湾曲で親しみ感を表現し、<br>
+                チョコレートの溶け流れる部分の切り取りと商品名の光るような文字スタイルから、高級感を表現しました。
+              </p>
+            </div>
+            <div class="creative-item">
+              <div class="crative-img">
+                <a href="works-3.html">
+                  <img src="img/hamburger.jpg" alt="大きく見る">
+                </a>
+              </div>
+              <h4 class="creative-h">新商品のハンバーガーバナー</h4>
+              <p class="creative-p">
+                ボリューム感と商品が引き立つよう、黒の背景色に、背景文字と床板の遠近から奥行きを出し立体感を表現しました。</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="creative-group">WordPress</h3>
+        </div>
+  </section>
+
+</body>
+
+</html>
