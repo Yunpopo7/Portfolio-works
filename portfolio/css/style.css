@@ -296,13 +296,10 @@ img {
 
 .message-text h4 {
   margin-bottom: 8px;
-
-
 }
 
 .message h4 {
   font-size: 35px;
-
   font-family: "Nunito Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
@@ -594,13 +591,17 @@ submit a:hover {
 
 /* スマートフォン */
 @media screen and (max-width: 768px) {
+  body {
+    padding-bottom: 300px;
+  }
+
   .container {
     width: 100%;
     padding: 0;
   }
 
   .content {
-    top: 0;
+    top: 0
   }
 
   .maingnav-list {
@@ -627,13 +628,14 @@ submit a:hover {
   }
 
   .header-logo {
-    padding: 1px;
+    padding: 20px;
     font-size: 14px;
+
   }
 
   #menu-sp {
     display: flex;
-    padding: 0;
+    padding: 10px;
     border: none;
   }
 
@@ -661,11 +663,11 @@ submit a:hover {
 
   #close img {
     position: absolute;
-    top: 0px;
     right: 0;
     background-color: rgba(0, 0, 0, .1);
     border: none;
     height: 40px;
+    padding: 2;
   }
 
   #logo-sp {
@@ -712,7 +714,6 @@ submit a:hover {
   .gnav-list {
     display: flex;
     flex-direction: column;
-
     text-align: center;
     padding: 5px;
     gap: 10px;
@@ -777,7 +778,7 @@ submit a:hover {
     max-width: 1000px;
     margin: 0 auto;
     margin-top: 100px;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
     padding: 0 40px;
   }
 
@@ -797,19 +798,38 @@ submit a:hover {
     line-height: 1.6;
   }
 
+  .message-img {
+    width: 100%;
+  }
+
   .about-list {
     display: flex;
     flex-direction: column;
   }
 
   .about-item {
-    height: 300px;
+    height: 3 00px;
     flex: 1;
     margin: 10px;
     background-color: #ffffff;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
     padding: 10px;
   }
+
+  .about-name {
+    padding-left: 0;
+  }
+
+  table,
+  thead,
+  tbody {
+    display: block;
+    width: 100%;
+  }
+
+
+
+
 
 
   /* creative */
@@ -818,6 +838,10 @@ submit a:hover {
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
+  }
+
+  .creative-item {
+    width: 100%;
   }
 
   .creative-p {
@@ -830,7 +854,16 @@ submit a:hover {
   .contact-form {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
   }
 
+  .contact-right {
+    width: 100%;
+    padding: 0;
+  }
+
+  .contact-textarea {
+    height: 300px;
+  }
 
 }
