@@ -14,6 +14,7 @@ body {
   font-size: 15px;
   letter-spacing: .05em;
   color: #333;
+  padding-bottom: 80px;
 }
 
 a {
@@ -361,27 +362,33 @@ h5 {
 }
 
 table {
-  margin: 0 auto;
+  margin: 0 50px;
+  border-collapse: collapse;
+  width: 90%;
 }
 
 th {
   font-size: 30px;
   font-weight: bold;
-  text-align: center;
-  width: 10%;
+  text-align: right;
+  background-color: beige;
+  height: 50px;
 }
 
+.colspan {
+  text-align: center;
+}
+
+
+table,
+th,
 td {
+  border: 3px solid brown;
   font-size: 20px;
   font-weight: bold;
   text-align: left;
-  width: 20%;
-  height: 100px;
 }
 
-tr {
-  width: 500px;
-}
 
 
 /*--------------------------------
@@ -481,7 +488,7 @@ input {
   background: #ffffff;
   padding: 10px;
   border-radius: 5px 5px 5px 5px;
-  height: 50px;
+  height: 30px;
 }
 
 .contact-send {
@@ -590,8 +597,9 @@ submit a:hover {
 
 
 /* スマートフォン */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   body {
+
     padding-bottom: 300px;
   }
 
@@ -601,7 +609,11 @@ submit a:hover {
   }
 
   .content {
-    top: 0
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    align-items: center;
   }
 
   .maingnav-list {
@@ -613,8 +625,9 @@ submit a:hover {
   }
 
   .background-image {
-    height: 60vh;
     object-fit: cover;
+    background-position: center;
+
   }
 
   .header {
@@ -706,9 +719,12 @@ submit a:hover {
   .logo {
     text-align: center;
     width: 100%;
-    font-size: 70px;
-    padding: 30px;
-    top: 30px;
+    font-size: clamp(40px, 8vw, 70px);
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0;
+    line-height: 1.2;
+
   }
 
   .gnav-list {
@@ -718,12 +734,15 @@ submit a:hover {
     padding: 5px;
     gap: 10px;
     top: 10px;
+    box-sizing: border-box;
+    margin: 0;
+    line-height: 1.2;
   }
 
 
 
   .item a {
-    font-size: 50px;
+    font-size: clamp(35px, 7vw, 65px);
     padding: 3px;
     top: 30px;
     gap: 1px;
@@ -740,6 +759,20 @@ submit a:hover {
     max-width: 800px;
     margin: 0 auto;
   }
+
+  .main-visual {
+    padding-bottom: 0;
+  }
+
+  .background-image {
+    height: 100vh;
+  }
+
+
+
+
+
+
 
   /* About */
 
@@ -820,12 +853,28 @@ submit a:hover {
     padding-left: 0;
   }
 
-  table,
-  thead,
-  tbody {
-    display: block;
-    width: 100%;
+
+  table {
+    margin: auto;
   }
+
+  th {
+    width: 50%;
+  }
+
+  .table-base thead {
+    display: block;
+    float: left;
+    width: 50%;
+  }
+
+
+
+
+
+
+
+
 
 
 
